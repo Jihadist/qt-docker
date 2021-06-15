@@ -18,10 +18,13 @@ jobs:
           registry: docker.pkg.github.com
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - id: read-docker-image-identifiers
+        name: Read Docker Image Identifiers
+        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
       - name: Build container image
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: |
-            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.ref }}
+            docker.pkg.github.com/${{ env.IMAGE_REPOSITORY }}/octo-image:${{ github.sha }}
+            docker.pkg.github.com/${{ env.IMAGE_REPOSITORY }}/octo-image:${{ github.ref }}
