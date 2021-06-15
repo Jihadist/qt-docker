@@ -1,6 +1,5 @@
 name: Docker Image CI
 
-folder: "linux-qt5-x64-static"
 
 on:
   push:
@@ -17,4 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file {{folder}}/Dockerfile --tag {{folder}}:$(date +%s)
+      working-directory: ./linux-qt5-x64-static
+      run: docker build . --file Dockerfile --tag {{working-directory}}:$(date +%s)
