@@ -42,7 +42,8 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
 
 RUN apt update && apt-get -t buster-backports install -y --no-install-recommends \
     clang-11 \
-    cmake \
+#    cmake \
+# cmake-3.16.3 isn't appropriate for cross-compiling with qemu
     ninja-build \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
