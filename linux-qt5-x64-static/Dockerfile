@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 ENV QT_DESKTOP ${QT_PATH}/${QT_VERSION}/${QT_BIN_PACKAGE}
 #ENV PATH ${QT_DESKTOP}/bin:${QT_PATH}/Tools/CMake/bin:${QT_PATH}/Tools/Ninja:$PATH
 
-RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
+#RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list
 
 # Install updates & requirements:
 #  * git, openssh-client, ca-certificates - clone & build
@@ -32,9 +32,9 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libxkbcommon-x11-0 \
     libfontconfig1 \
     libdbus-1-3 \
-    clang-11/buster-backports \
-    cmake/buster-backports \
-    python \
+   # clang-11/buster-backports \
+   # cmake/buster-backports \
+    python-3 \
     perl \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
