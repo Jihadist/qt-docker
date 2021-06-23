@@ -34,7 +34,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libdbus-1-3 \
    # clang-11/buster-backports \
    # cmake/buster-backports \
-    python-3 \
+    python3 \
     perl \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
