@@ -35,7 +35,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libxkbcommon-x11-0 \
     libfontconfig1 \
     libdbus-1-3 \
-    python \
+    python3 \
     perl \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
