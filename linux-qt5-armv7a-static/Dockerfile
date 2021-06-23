@@ -33,7 +33,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libxkbcommon-x11-0 \
     libfontconfig1 \
     libdbus-1-3 \
-    python \
+    python-3 \
     perl \
     g++-arm-linux-gnueabihf \
     libc6-armhf-cross \
