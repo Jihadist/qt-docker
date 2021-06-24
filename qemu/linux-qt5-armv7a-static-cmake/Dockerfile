@@ -10,6 +10,7 @@ RUN apt update  && apt install -y --no-install-recommends \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Part of https://gitlab.kitware.com/cmake/cmake/-/issues/22328
 RUN cd CMake && \
     mkdir Testing && \
     cd Testing && \
