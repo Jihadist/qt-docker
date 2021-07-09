@@ -95,6 +95,6 @@ WORKDIR /home/user
 
 RUN cd qt5 && make install
 
-ENV PATH ${QT_SYSROOT}/${QT_PATH}/bin:$PATH
+ENV PATH ${QT_PATH}/bin:$PATH
 
 RUN rm -rf qt5
