@@ -11,15 +11,15 @@ RUN apt update  && apt install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Part of https://gitlab.kitware.com/cmake/cmake/-/issues/22328
-RUN cd CMake && \
-    mkdir Testing && \
-    cd Testing && \
-    mkdir JacocoCoverage && \
-    cd JacocoCoverage && \
-    mkdir Coverage
-      
-    
-RUN cp -r  /home/user/CMake/Tests/JacocoCoverage/Coverage/target /home/user/CMake/Testing/JacocoCoverage/Coverage/target
+# RUN cd CMake && \
+#     mkdir Testing && \
+#     cd Testing && \
+#     mkdir JacocoCoverage && \
+#     cd JacocoCoverage && \
+#     mkdir Coverage
+#       
+#     
+# RUN cp -r  /home/user/CMake/Tests/JacocoCoverage/Coverage/target /home/user/CMake/Testing/JacocoCoverage/Coverage/target
 
 RUN cd ~/CMake && ./bootstrap
     
