@@ -49,9 +49,13 @@ RUN apt update  && apt install -y --no-install-recommends \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
-ENV CC=/usr/bin/clang-11
+RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++
 
-ENV CXX=/usr/bin/clang++-11
+RUN ln -s /usr/bin/clang-11 /usr/bin/clang
+
+ENV CC=/usr/bin/clang
+
+ENV CXX=/usr/bin/clang++
 
 WORKDIR /tmp
 
@@ -68,3 +72,17 @@ RUN make install
 WORKDIR /tmp
 
 RUN rm -rf CMake
+
+# Reconfigure locale
+RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
+
+# Add group & user + sudo
+RUN groupadd -r user && useradd --create-home --gid user user && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
+
+USER user
+WORKDIR /home/user
+ENV HOME /home/user
+
+ENV CC=/usr/bin/clang
+
+ENV CXX=/usr/bin/clang++
