@@ -39,7 +39,7 @@ jobs:
           file: ./linux-qt5-x64-static/Dockerfile
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: atom63/qt-docker/linux-qt5-x64-static
+          tags: atom63/qt-docker:linux-qt5-x64-static
           labels: ${{ steps.meta.outputs.labels }}
           
     
