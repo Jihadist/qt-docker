@@ -16,5 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      working-directory: ./linux-qt5-x64-static
-      run: docker build . --file Dockerfile --tag linux-qt5-x64-static:$(date +%s)
+      working-directory: ./x86_64/buster
+      run: docker build . --file Dockerfile --tag linux-buster-x86_64:$(date +%s)

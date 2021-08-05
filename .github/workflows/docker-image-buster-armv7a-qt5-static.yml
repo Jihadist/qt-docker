@@ -34,5 +34,5 @@ jobs:
           install: true
       -
         name: Build
-        working-directory: ./qemu/linux-qt5-armv7a-static-cmake
-        run: docker  build . --file Dockerfile --tag linux-qt5-armv7a-static-cmake:$(date +%s) --platform linux/arm/v7
+        working-directory: ./armv7a/buster-qt5-static
+        run: docker  build . --file Dockerfile --tag linux-buster-armv7a-qt5-static-cmake:$(date +%s) --platform linux/arm/v7

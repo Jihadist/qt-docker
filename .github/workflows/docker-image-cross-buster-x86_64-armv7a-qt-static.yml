@@ -16,5 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      working-directory: ./linux-qt5-armv7a-static
-      run: docker build . --file Dockerfile --tag linux-qt5-armv7a-static:$(date +%s)
+      working-directory: ./cross-x86_64_armv7a/buster-qt5-static
+      run: docker build . --file Dockerfile --tag linux-buster-cross-x86_64-armv7a-qt5-static:$(date +%s)
