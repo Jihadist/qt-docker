@@ -10,19 +10,26 @@ So here you can receive:
 - cmake-latest (3.21.0-rc1 - 23.06.2021) - built from sources
 - qt-5.15.2 - build from sources, kde-patches can be easily integrated  if it needs
 - other tools are the same as debian:buster repository
-
-Plans:
-- Integrate conan
+- conan
 
 
-Debian buster x64 qt-static
-[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-x64.yml/badge.svg?branch=master)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-x64.yml)
+Debian buster x86_64 with qt5-static
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64-qt5-static.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64-qt5-static.yml)
 
-Debian buster x64 qt-static-crosscompiled-armhf
-[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a.yml/badge.svg?branch=master)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a.yml)
+Debian buster x86_64 with cmake from scratch
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64.yml)
 
-Debian buster armhf qt-static - qemu
-[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a-qemu.yml/badge.svg?branch=master)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a-qemu.yml)
+Debian buster x86_64 with cmake from scratch, qt5 from buster upstream
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64-qt5.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-x86_64-qt5.yml)
 
-Debian buster armhf qt-static cmake - qemu
-[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a-qemu-cmake.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-armv7a-qemu-cmake.yml)
+Debian buster x86_64 cross armv7a(armhf) with qt5-static
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-cross-buster-x86_64-armv7a-qt-static.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-cross-buster-x86_64-armv7a-qt-static.yml)
+
+Debian buster armhf with qt5-static
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static.yml)
+
+Debian buster armhf with qt5-static, cmake from scratch
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static-cmake.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static-cmake.yml)
+
+Debian buster armhf with qt5-static, cmake from scratch, conan
+[![Docker Image CI](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static-cmake-conan.yml/badge.svg)](https://github.com/Jihadist/qt-docker/actions/workflows/docker-image-buster-armv7a-qt5-static-cmake-conan.yml)
