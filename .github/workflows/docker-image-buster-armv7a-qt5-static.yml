@@ -54,7 +54,7 @@ jobs:
             file: ./armv7a/buster-qt5-static/Dockerfile
             context: .
             push: ${{ github.event_name != 'pull_request' }}
-            tags: atom63/qt-docker:linux-buster-armv7a-qt5-static-cmake
+            tags: atom63/qt-docker:linux-buster-armv7a-qt5-static
             labels: ${{ steps.meta.outputs.labels }}          
 #      -
 #        name: Build
