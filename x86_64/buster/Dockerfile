@@ -39,7 +39,6 @@ RUN echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/so
 
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
     clang-11/buster-backports \
-    cmake/buster-backports \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*    
 
