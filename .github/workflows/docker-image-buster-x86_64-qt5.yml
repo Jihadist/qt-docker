@@ -15,10 +15,7 @@ jobs:
 
     steps:
     - name: Build the Docker image
-      uses: actions/checkout@v2
-    
-#      working-directory: ./linux-qt5-x64-static
-#      run: docker build . --file Dockerfile --tag linux-qt5-x64-static:$(date +%s)
+      uses: actions/checkout@v2    
       
     - name: Login to docker hub
       uses: docker/login-action@v1.10.0

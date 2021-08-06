@@ -56,7 +56,3 @@ jobs:
             push: ${{ github.event_name != 'pull_request' }}
             tags: atom63/qt-docker:linux-buster-armv7a-qt5-static-cmake
             labels: ${{ steps.meta.outputs.labels }}          
-#      -
-#        name: Build
-#        working-directory: ./qemu/linux-qt5-armv7a-static
-#        run: docker  build . --file Dockerfile --tag linux-qt5-armv7a-static:$(date +%s) --platform linux/arm/v7
