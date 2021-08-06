@@ -1,4 +1,4 @@
-FROM atom63/qt-docker:linux-cmake-x64
+FROM atom63/qt-docker:linux-buster-x86_64
 
 ENV DEBIAN_FRONTEND=noninteractive 
 
