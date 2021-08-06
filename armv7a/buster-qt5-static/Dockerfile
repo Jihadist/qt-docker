@@ -47,7 +47,15 @@ RUN apt update && apt-get -t buster-backports install -y --no-install-recommends
     ninja-build \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
-    
+
+RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++
+
+RUN ln -s /usr/bin/clang-11 /usr/bin/clang
+
+ENV CC=/usr/bin/clang
+
+ENV CXX=/usr/bin/clang++
+
 #RUN dpkg --add-architecture armhf && apt update && \
 #    apt install libc:armhf \
 #    binutils:armhf
@@ -90,6 +98,10 @@ RUN mkdir -p ${QT_PATH}
 RUN chown user ${QT_PATH}
 
 USER user
+
+ENV CC=/usr/bin/clang
+
+ENV CXX=/usr/bin/clang++
 
 WORKDIR /home/user
 
