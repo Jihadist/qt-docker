@@ -1,4 +1,4 @@
-FROM atom63/qt-docker:qemu_linux-qt5-armv7a-static
+FROM atom63/qt-docker:linux-qt5-armv7a-static
   
 RUN git clone https://github.com/Kitware/CMake.git -b release
 
