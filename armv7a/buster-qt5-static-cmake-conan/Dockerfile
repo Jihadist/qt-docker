@@ -1,4 +1,4 @@
-FROM atom63/qt-docker:qemu_linux-qt5-armv7a-static-cmake
+FROM atom63/qt-docker:linux-buster-armv7a-qt5-static-cmake
   
 USER root
 
