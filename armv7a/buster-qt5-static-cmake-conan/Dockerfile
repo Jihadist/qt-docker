@@ -24,18 +24,18 @@ RUN conan profile update settings.compiler.version=11 default
 
 USER root
 
-RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++
+#RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++
 
-RUN ln -s /usr/bin/clang-11 /usr/bin/clang
+#RUN ln -s /usr/bin/clang-11 /usr/bin/clang
 
 RUN apt update  && apt install -y --no-install-recommends \
     libudev-dev \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
-ENV CC=/usr/bin/clang
+#ENV CC=/usr/bin/clang
 
-ENV CXX=/usr/bin/clang++
+#ENV CXX=/usr/bin/clang++
 
 USER user
 
