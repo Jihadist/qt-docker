@@ -1,4 +1,4 @@
-FROM atom63/qt-docker:linux-qt5-armv7a-static
+FROM atom63/qt-docker:linux-buster-armv7a-qt5-static
   
 RUN git clone https://github.com/Kitware/CMake.git -b release
 
