@@ -39,7 +39,7 @@ RUN pip3 install conan
 
 COPY ./profiles/armhf ./.conan/profiles/
 
-RUN cp ./conan/profiles/armhf ./conan/profiles/default 
+RUN cp ./.conan/profiles/armhf ./.conan/profiles/default 
 
 # Test
 RUN conan install zlib/1.2.11@
