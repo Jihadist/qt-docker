@@ -16,11 +16,11 @@ RUN apt install -y libstdc++-8-dev:armhf \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY ./main.cpp ./   
+#COPY ./main.cpp ./   
 
-RUN clang++  -target arm-linux-gnueabihf  main.cpp
+#RUN clang++  -target arm-linux-gnueabihf  main.cpp
 
-RUN readelf -h a.out
+#RUN readelf -h a.out
 
 
 
