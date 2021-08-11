@@ -30,18 +30,11 @@ USER user
 ENV PATH "$PATH:/home/user/.local/bin"
 
 RUN pip3 install conan
+   
+COPY --chown=user:user ./profiles/armhf ./.conan/profiles/
 
-#RUN conan profile new default --detect
-#RUN conan profile update settings.compiler.libcxx=libstdc++11 default
-# We have clang-11
-#RUN conan profile update settings.compiler=clang default
-#RUN conan profile update settings.compiler.version=11 default    
+RUN cp ./.conan/profiles/armhf ./.conan/profiles/default 
 
-COPY ./profiles/armhf ./.conan/profiles/
+RUN conan install zlib/1.2.11@ --build=missing
 
-RUN cp ./conan/profiles/armhf ./conan/profiles/default 
-
-# Test
-RUN conan install zlib/1.2.11@
-
-RUN conan install zlib/1.2.11@ --profile armhf
+RUN conan install zlib/1.2.11@ --profile armhf --build=missing
