@@ -1,0 +1,28 @@
+FROM atom63/qt-docker:linux-buster-cross-x86_64-armv7a-clang-conan
+
+USER root
+
+RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends\
+    qt5-default:armhf \
+    qttools5-dev:armhf  \
+    qtdeclarative5-dev:armhf  \
+    qtbase5-dev:armhf  \
+    libqt5widgets5:armhf  \
+    libqt5x11extras5-dev:armhf  \
+    libqt5svg5-dev:armhf  \
+    libqt5serialport5-dev:armhf  \
+    qtbase5-private-dev:armhf  \
+    && apt-get -qq clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt update  && apt install -y --no-install-recommends \
+    libudev-dev:armhf \
+    libhidapi-dev:armhf \
+    && apt-get -qq clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
+RUN apt update  && apt install -y --no-install-recommends \
+    ninja-build/buster-backports \
+    && apt-get -qq clean \
+    && rm -rf /var/lib/apt/lists/* 
