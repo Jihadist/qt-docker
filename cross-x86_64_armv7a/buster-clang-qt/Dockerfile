@@ -26,3 +26,5 @@ RUN apt update  && apt install -y --no-install-recommends \
     ninja-build/buster-backports \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/* 
+    
+USER user    
