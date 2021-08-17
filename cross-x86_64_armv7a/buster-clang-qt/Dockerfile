@@ -18,13 +18,8 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends\
 RUN apt update  && apt install -y --no-install-recommends \
     libudev-dev:armhf \
     libhidapi-dev:armhf \
+    libgpiod-dev:armhf \
     && apt-get -qq clean \
     && rm -rf /var/lib/apt/lists/*
-
-
-RUN apt update  && apt install -y --no-install-recommends \
-    ninja-build/buster-backports \
-    && apt-get -qq clean \
-    && rm -rf /var/lib/apt/lists/* 
     
 USER user    
