@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#     - uses: actions/checkout@v2
+#     - uses: actions/checkout@v3
 #     - name: Build the Docker image
 #       working-directory: ./cross-x86_64_armv7a/buster-qt5-static
 #       run: docker build . --file Dockerfile --tag linux-buster-cross-x86_64-armv7a-qt5-static:$(date +%s)
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       name: Checkout
     - name: Login to docker hub
       uses: docker/login-action@v1.10.0
